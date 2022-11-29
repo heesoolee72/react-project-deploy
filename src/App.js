@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>변경하기@@@@@!</p>
+        <p>branch에서 내용을 수정함.</p>
         <a
           className="App-link"
           href="https://reactjs.org"
