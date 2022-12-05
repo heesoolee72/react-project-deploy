@@ -1,0 +1,138 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.box_container {
+  width: 28rem;
+  height: 29rem;
+  border-radius: 1rem;
+  border: 1px solid;
+  overflow: hidden;
+  margin: auto;
+  margin-left: min(10px);
+  margin-right: min(10px);
+}
+
+.header {
+  background-color: #1c1e3d;
+  display: flex;
+  height: 15%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.lightmode {
+  color: white;
+  font-style: italic;
+}
+
+.lightmode_icon {
+  color: white;
+}
+
+.filter_option {
+  margin-top: auto;
+  padding-top: 0.3rem;
+  width: 11.5rem;
+  display: flex;
+  justify-content: space-between;
+  color: #d2864a;
+  font-weight: 600;
+}
+
+.list_container {
+  height: 69%;
+  background-color: #272844;
+  padding: 20px;
+  padding-bottom: 0px;
+  color: white;
+  border-top: 0.1px solid rgba(255, 255, 255, 0.583);
+  overflow-y: scroll;
+}
+
+.list {
+  list-style: none;
+}
+
+.list_item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+
+.list_content {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  margin-right: 0.8rem;
+  width: 18px;
+  height: 18px;
+  accent-color: #f18f35;
+}
+
+.list_item_done {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  align-items: center;
+  margin-bottom: 0.9rem;
+}
+
+.list_content_done {
+  display: flex;
+  align-items: center;
+  text-decoration: line-through;
+  color: rgba(245, 245, 245, 0.377);
+}
+
+.checkbox_done {
+  margin-right: 0.8rem;
+  width: 18px;
+  height: 18px;
+  accent-color: #f18f35;
+}
+
+.add_todo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16%;
+  background-color: #1c1e3d;
+}
+
+.trashcan_icon_wrapper:hover {
+  cursor: pointer;
+}
+
+.add_todo_content {
+  display: flex;
+  align-items: center;
+  border-radius: 0.7rem;
+  border: 1px solid;
+  overflow: hidden;
+  height: 2.9rem;
+}
+.add_button {
+  background-color: #f18f35;
+  color: white;
+  height: 2.9rem;
+  width: 25%;
+  font-size: 1.1rem;
+}
+
+.add_input {
+  padding: 1rem;
+  width: 23rem;
+  font-size: 1.1rem;
+  outline: none;
+}
