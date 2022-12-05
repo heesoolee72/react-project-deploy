@@ -12,7 +12,7 @@ const initialTodoList = [
 
 function App() {
   const [newTodoInput, setNewTodoInput] = useState("");
-  const [todoList, setTodoList] = useState(
+  const [todos, setTodos] = useState(
     (localStorage.getItem("todoList") !== "[]" &&
       JSON.parse(localStorage.getItem("todoList"))) ||
       initialTodoList
@@ -24,12 +24,12 @@ function App() {
   };
 
   useEffect(() => {
-    localStorage.setItem("todoList", JSON.stringify(todoList));
-  }, [newTodoInput, todoList]);
+    localStorage.setItem("todoList", JSON.stringify(todos));
+  }, [newTodoInput, todos]);
 
   const handleCheckBox = (id) => {
-    setTodoList(
-      todoList.map((item) => {
+    setTodos(
+      todos.map((item) => {
         return id === item.id ? { ...item, done: !item.done } : item;
       })
     );
@@ -41,10 +41,10 @@ function App() {
 
   const handleAddBtnClick = () => {
     if (newTodoInput.length > 0) {
-      setTodoList((list) => {
+      setTodos((list) => {
         return [
           ...list,
-          { id: todoList.length + 1, todo: newTodoInput, done: false },
+          { id: todos.length + 1, todo: newTodoInput, done: false },
         ];
       });
       setNewTodoInput("");
@@ -59,7 +59,7 @@ function App() {
   };
 
   const handleDeleteItem = (itemToDelete) => {
-    setTodoList((list) => {
+    setTodos((list) => {
       return list.filter((item) => itemToDelete !== item.id);
     });
   };
@@ -68,22 +68,22 @@ function App() {
     <div className={styles.wrapper}>
       <div className={styles.box_container}>
         <header className={styles.header}>
-          <span className={styles.lightmode}>Dark mode</span>
+          <span className={styles.darkmode}>Dark mode</span>
           <div className={styles.filter_option}>
-            <div>
+            <p className={styles.filter_text}>
               All <hr />
-            </div>
-            <div>
+            </p>
+            <p className={styles.filter_text}>
               Active <hr />
-            </div>
-            <div>
+            </p>
+            <p className={styles.filter_text}>
               Completed <hr />
-            </div>
+            </p>
           </div>
         </header>
         <div className={styles.list_container}>
           <li className={styles.list}>
-            {todoList?.map((item) => {
+            {todos?.map((item) => {
               return (
                 <ul
                   key={item.id}
@@ -153,6 +153,6 @@ export default App;
 // 2. 아이템 체크박스 ✅
 // 3. 아이템 삭제하기 ✅
 // 4. 아이템 추가하기 ✅
-// 5. 아이템 필터링하기 ✅
+// 5. 아이템 필터링하기
 // 6. 다크모드 지원하기
 // 7. 로컬 스토리지에 저장 ✅
