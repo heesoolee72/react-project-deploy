@@ -41,7 +41,7 @@ export default function TodoForm({
                 ? { color: "grey" }
                 : { color: "white" }
               : item.done
-              ? { color: "grey" }
+              ? { color: "lightGrey" }
               : { color: "black" }
           }
         ></i>
