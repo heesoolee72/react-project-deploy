@@ -1,5 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap");
 
+:root {
+  --color-bg-dark: #f7f6f7;
+  --color-bg: #ffffff;
+  --color-grey: rgb(129, 129, 129);
+  --color-text: #000000;
+  --color-accent: #e07110;
+  /* --color-white: ; */
+  --color-hr: #b2b0b2;
+  /* --color-scrollbar: */
+  --color-filter-inactive: #f6ae75;
+}
+
+html.dark {
+  --color-bg-dark: #1c1e3d;
+  --color-bg: #272844;
+  --color-grey: rgba(245, 245, 245, 0.377);
+  --color-text: #ffffff;
+  --color-accent: #ec8225;
+  /* --color-white: ; */
+  --color-hr: #ffffff;
+  --color-filter-inactive: #d2854a92;
+}
+
 * {
   box-sizing: border-box;
 }

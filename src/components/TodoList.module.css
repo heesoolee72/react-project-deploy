@@ -1,0 +1,96 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.box_container {
+  width: 62.5%;
+  height: 70%;
+
+  max-width: 28rem;
+  max-height: 31rem;
+
+  min-width: 24rem;
+  min-height: 25rem;
+
+  border-radius: 1rem;
+  overflow: hidden;
+  margin: min(10px);
+  box-shadow: 15px 33px 46px 9px rgba(0, 0, 0, 0.48);
+}
+
+.header {
+  background-color: var(--color-bg-dark);
+  display: flex;
+  height: 15%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.darkmode {
+  padding-left: 5px;
+  color: var(--color-text);
+  cursor: pointer;
+  font-style: italic;
+  transition: all 0.15s ease-out;
+}
+
+.darkmode:hover {
+  color: var(--color-text);
+  cursor: pointer;
+  font-style: italic;
+  transform: scale(1.13);
+}
+
+.filter_option {
+  margin-top: -8px;
+  width: 12.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter_text {
+  color: var(--color-accent);
+  cursor: pointer;
+  height: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.filter_text_inactive {
+  color: var(--color-filter-inactive);
+  cursor: pointer;
+  height: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.filter_hr_inactive {
+  display: none;
+}
+
+.filter_hr {
+  border-style: none;
+  border: 1px solid;
+  margin-top: 5px;
+  border-color: var(--color-hr);
+  animation-duration: 0.8s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    width: 0%;
+    margin-right: 100%;
+  }
+
+  to {
+    width: 100%;
+    margin-right: 0%;
+  }
+}

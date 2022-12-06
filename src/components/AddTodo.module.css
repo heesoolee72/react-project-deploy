@@ -1,0 +1,35 @@
+.add_todo_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16%;
+  background-color: var(--color-bg-dark);
+  padding: min(1rem);
+}
+
+.add_todo_content {
+  display: flex;
+  align-items: center;
+  border-radius: 0.7rem;
+  overflow: hidden;
+  height: 2.9rem;
+  background-color: #f18f35;
+}
+
+.add_button {
+  background-color: #f18f35;
+  color: white;
+  height: 2.9rem;
+  width: 25%;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.add_input {
+  padding: 1rem;
+  width: 23rem;
+  font-size: 1.1rem;
+  outline: none;
+  border: none;
+}
