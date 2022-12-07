@@ -97,7 +97,6 @@ export default function TodoList() {
           setTodos={setTodos}
           newTodoInput={newTodoInput}
           setNewTodoInput={setNewTodoInput}
-          darkMode={darkMode}
         />
       </div>
     </div>

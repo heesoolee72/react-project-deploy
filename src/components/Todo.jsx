@@ -12,7 +12,6 @@ export default function Todo({
   setTodos,
   newTodoInput,
   setNewTodoInput,
-  darkMode,
 }) {
   const handleCheckBox = (id) => {
     setTodos(
@@ -36,10 +35,7 @@ export default function Todo({
   const handleAddBtnClick = () => {
     if (newTodoInput.length > 0) {
       setTodos((list) => {
-        return [
-          ...list,
-          { id: todos.length + 1, todo: newTodoInput, done: false },
-        ];
+        return [...list, { id: new Date(), todo: newTodoInput, done: false }];
       });
       setNewTodoInput("");
       scrollToBottom();
@@ -55,7 +51,6 @@ export default function Todo({
               todos={todos}
               handleCheckBox={handleCheckBox}
               handleDeleteItem={handleDeleteItem}
-              darkMode={darkMode}
             />
           )}
           {todoFilter === "showActive" && (
@@ -63,7 +58,6 @@ export default function Todo({
               todos={todos}
               handleCheckBox={handleCheckBox}
               handleDeleteItem={handleDeleteItem}
-              darkMode={darkMode}
             />
           )}
           {todoFilter === "showCompleted" && (
@@ -71,7 +65,6 @@ export default function Todo({
               todos={todos}
               handleCheckBox={handleCheckBox}
               handleDeleteItem={handleDeleteItem}
-              darkMode={darkMode}
             />
           )}
         </li>

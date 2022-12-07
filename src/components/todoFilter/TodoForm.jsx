@@ -1,12 +1,12 @@
 import React from "react";
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/DarkModeContext";
+
 import styles from "../Todo.module.css";
 
-export default function TodoForm({
-  item,
-  handleCheckBox,
-  handleDeleteItem,
-  darkMode,
-}) {
+export default function TodoForm({ item, handleCheckBox, handleDeleteItem }) {
+  const { darkMode } = useContext(DarkModeContext);
+
   return (
     <ul
       key={item.id}
